@@ -5,9 +5,13 @@ function Counter(){
 const initialx=1
 const [x,setx] = useState(initialx)
 
+
+// add function
 const add=(a)=>{
 setx(x+1);
 }
+
+// subtract function
 const subtract=(a)=>{
   setx(x-1);
   }
