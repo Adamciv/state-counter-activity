@@ -1,14 +1,29 @@
-const Counter = () => {
-  const count = 0;
+import { useState } from "react";
+
+function Counter(){
+
+const initialx=1
+const [x,setx] = useState(initialx)
+
+const add=(a)=>{
+setx(x+1);
+}
+const subtract=(a)=>{
+  setx(x-1);
+  }
+  const reset=()=>{
+    setx(initialx);
+    }
+
 
   return (
-    <div>
-      <button>Increment!</button>
-      <button>Decrement!</button>
-      <button>Reset</button>
-      <h1>Current Count: {count}</h1>
-    </div>
-  );
-};
+  <div>
+    <button onClick={add}>+</button>
+    <button onClick={subtract}>-</button>
+    <button onClick={reset}>Reset</button>
+    <h1>counter: {x}</h1>
+  </div>
+    )
+}
 
 export default Counter;
